@@ -25,16 +25,21 @@ export default function CartList(){
         
       
     },{})
+
+    
    
     console.log(goodsObj);
+    console.log(cart);
     
  
     return(
         <div>
             <ul>
-                {Object.keys(cart).map(item=><li key={item+goodsObj[item]['title']}> {goodsObj[item]['title']}-{cart[item]}</li>)}
+                {Object.keys(cart).map(item=>
+                <Cart key={item+goodsObj[item]['title'] } title={goodsObj[item]['title']}  articul={goodsObj[item]['articul']}  
+                    cost={goodsObj[item]['cost']} amount={cart[item]}/>)}
             </ul>
-            <Cart/>
+            
         </div>
     )
 }
