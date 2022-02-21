@@ -5,7 +5,7 @@ import CartList from "./containers/CartList";
 
 function App() {
   return (
-    <div className="goods-field">
+    <div className="Apps">
     <GoodList/>
     <CartList/>
     </div>

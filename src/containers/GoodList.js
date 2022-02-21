@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import { useSelector,useDispatch } from "react-redux";
 import { goodsSlice } from "../store/goodsSlice";
-import {increment,allSum} from "../store/cartSlice";
+import {increment,allSum,decrement,ellumination} from "../store/cartSlice";
 import {
     selectGoods
 } from '../store/goodsSlice';
@@ -15,8 +15,17 @@ export default function GoodList(){
     let clickHandler = (event)=>{
         event.preventDefault();
         let t=event.target;
-        if (!t.classList.contains('add-to-cart')) return true;
-        dispatch(increment(t.getAttribute('data-key')));
+        if (t.classList.contains('add-to-cart')) {
+            dispatch(increment(t.getAttribute('data-key')));
+        }
+        
+        if (t.classList.contains('remove-from-cart')){
+            
+            dispatch(decrement(t.getAttribute('data-key')));
+        }
+        if (t.classList.contains('discard-from-cart')){
+            dispatch(ellumination(t.getAttribute('data-key')));
+        }
     }
 
     return(
