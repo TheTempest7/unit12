@@ -19,15 +19,10 @@ export default function GoodList(){
             dispatch(increment(t.getAttribute('data-key')));
         }
         
-        if (t.classList.contains('remove-from-cart')){
-            
-            dispatch(decrement(t.getAttribute('data-key')));
-        }
-        if (t.classList.contains('discard-from-cart')){
-            dispatch(ellumination(t.getAttribute('data-key')));
-        }
+     
     }
-
+    console.log(goods);
+    
     return(
 <>
 <div className="goods-field" onClick={clickHandler}>

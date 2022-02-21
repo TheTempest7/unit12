@@ -29,7 +29,7 @@ export const cartSlice= createSlice({
     },
     ellumination:(state,data)=>{
         let articul=data.payload;
-        state.value[articul]=0;
+        delete  state.value[articul];
     }
     },
 });

@@ -44,3 +44,9 @@ code {
   display: block;
   margin: 20px auto;
 }
+.img{width: 20px;
+margin-top: 20%;}
+.cart__container{
+  display:flex;
+  
+}
