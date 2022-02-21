@@ -44,6 +44,10 @@ export default function CartList(){
         ((a, b) => a + b);
         dispatch(allSum(sumOverAll))
     }
+    else {
+        dispatch(allSum(0))
+        
+    }
 
     
    console.log(costGoods);
